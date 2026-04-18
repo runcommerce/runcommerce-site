@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Cpu, Handshake, Layers, Plug } from "lucide-react";
+import { ArrowRight, Cpu, Handshake, Plug } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import { Section, Eyebrow } from "@/components/Section";
