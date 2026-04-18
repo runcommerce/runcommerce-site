@@ -10,7 +10,7 @@ const links = [
   { to: "/automation", label: "AI Automation" },
   { to: "/services", label: "Managed Services" },
   { to: "/linkcommerce", label: "LinkCommerce" },
-  { to: "https://hostcommerce.ie", label: "HostCommerce", external: true },
+  { to: "/hostcommerce", label: "HostCommerce" },
   { to: "/about", label: "About" },
   { to: "/partners", label: "Partners" },
 ];
