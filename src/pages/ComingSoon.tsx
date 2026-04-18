@@ -4,8 +4,12 @@ const ComingSoon = () => {
       <div className="max-w-2xl w-full text-center space-y-8">
 
         {/* Logo */}
-        <div className="space-y-2">
-          <h1 className="text-4xl font-bold tracking-tight">RunCommerce</h1>
+        <div className="space-y-6">
+          <img
+            src="/logo.svg"
+            alt="RunCommerce"
+            className="h-10 mx-auto"
+          />
           <p className="text-gray-400 text-lg">The AI Operating System for eCommerce</p>
         </div>
 
