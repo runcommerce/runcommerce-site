@@ -70,22 +70,49 @@ const LinkCommerce = () => (
           Years of platform engineering across payments, shipping, ERP, marketplaces, marketing and more — all available through LinkCommerce out of the box.
         </p>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+      <div className="space-y-10">
         {[
-          "Stripe", "PayPal", "Elavon", "Adyen", "Worldpay", "Klarna",
-          "Apple Pay", "Google Pay", "Realex", "Sage Pay", "Authorize.Net", "AIB MS",
-          "DPD", "DHL", "UPS", "FedEx", "An Post", "Royal Mail",
-          "Hermes", "ParcelForce", "SAP", "MS Dynamics 365", "NetSuite", "Sage",
-          "Xero", "QuickBooks", "Odoo", "Brightpearl", "Linnworks", "Akeneo PIM",
-          "Algolia", "Elasticsearch", "Klaviyo", "Mailchimp", "HubSpot", "Salesforce",
-          "Dotdigital", "GA4", "GTM", "Meta Pixel", "Amazon", "eBay",
-          "Etsy", "Google Shopping", "TikTok Shop", "Trustpilot", "Yotpo", "DeepL",
-        ].map((logo) => (
-          <div
-            key={logo}
-            className="rounded-xl border border-border bg-card/60 backdrop-blur h-16 flex items-center justify-center text-xs sm:text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors text-center px-2"
-          >
-            {logo}
+          {
+            category: "Platforms",
+            items: ["Shopify", "Magento / Adobe Commerce", "BigCommerce", "Salesforce Commerce Cloud", "WooCommerce", "osCommerce", "RunCommerce", "Custom"],
+          },
+          {
+            category: "Logistics",
+            items: ["DPD", "DHL", "UPS", "FedEx", "An Post", "Royal Mail", "Hermes", "ParcelForce", "GLS", "Click & Collect"],
+          },
+          {
+            category: "Payments",
+            items: ["Stripe", "PayPal", "Elavon", "Adyen", "Worldpay", "Klarna", "Apple Pay", "Google Pay", "Realex", "Sage Pay", "Authorize.Net", "AIB MS"],
+          },
+          {
+            category: "Finance",
+            items: ["SAP", "Microsoft Dynamics 365", "NetSuite", "Sage", "Xero", "QuickBooks", "Odoo", "Exchequer"],
+          },
+          {
+            category: "Marketplaces",
+            items: ["Amazon", "eBay", "Etsy", "Google Shopping", "Facebook & Instagram Shops", "TikTok Shop", "Pinterest", "ChannelAdvisor"],
+          },
+          {
+            category: "Distributors",
+            items: ["Exertis", "Tech Data", "Ingram Micro", "Westcoast", "DCC", "Musgrave", "BWG"],
+          },
+          {
+            category: "Analytics & Tracking",
+            items: ["Google Analytics 4", "Google Tag Manager", "Meta Pixel", "TikTok Pixel", "Hotjar", "Microsoft Clarity", "Segment", "Looker Studio"],
+          },
+        ].map((cat) => (
+          <div key={cat.category}>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">{cat.category}</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+              {cat.items.map((logo) => (
+                <div
+                  key={logo}
+                  className="rounded-xl border border-border bg-card/60 backdrop-blur h-16 flex items-center justify-center text-xs sm:text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors text-center px-2"
+                >
+                  {logo}
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
