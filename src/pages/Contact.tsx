@@ -36,7 +36,7 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground">Remote-first, with hubs in Stockholm, Berlin and London.</p>
             </div>
             <div className="space-y-4 text-sm">
-              <div className="flex items-start gap-3"><Mail className="h-5 w-5 text-primary mt-0.5"/><div><div className="font-medium">hello@nordstack.dev</div><div className="text-muted-foreground">General inquiries</div></div></div>
+              <div className="flex items-start gap-3"><Mail className="h-5 w-5 text-primary mt-0.5"/><div><div className="font-medium">hello@runcommerce.dev</div><div className="text-muted-foreground">General inquiries</div></div></div>
               <div className="flex items-start gap-3"><Phone className="h-5 w-5 text-primary mt-0.5"/><div><div className="font-medium">+46 8 555 010 20</div><div className="text-muted-foreground">Mon–Fri, 09:00–18:00 CET</div></div></div>
               <div className="flex items-start gap-3"><MapPin className="h-5 w-5 text-primary mt-0.5"/><div><div className="font-medium">Sveavägen 44</div><div className="text-muted-foreground">111 34 Stockholm, Sweden</div></div></div>
             </div>
