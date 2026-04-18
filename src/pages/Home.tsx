@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Bot, Boxes, Globe, Layers, Package, Rocket, ShieldCheck, ShoppingBag, Smartphone, Sparkles, Store, Timer, Truck, Workflow, Zap } from "lucide-react";
+import { ArrowRight, Bot, Boxes, Globe, Package, Rocket, ShieldCheck, ShoppingBag, Smartphone, Sparkles, Store, Timer, Truck, Workflow, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, Eyebrow } from "@/components/Section";
 import CTAStrip from "@/components/CTAStrip";
