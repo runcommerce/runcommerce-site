@@ -1,11 +1,15 @@
-import { Bot, Boxes, MessageSquare, RefreshCw, Sparkles, Workflow } from "lucide-react";
+import { Bot, Database, FolderInput, Headphones, Image as ImageIcon, Languages, RefreshCw, ShoppingBag, Workflow } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { Section, Eyebrow } from "@/components/Section";
 import CTAStrip from "@/components/CTAStrip";
 
 const agents = [
-  { icon: Sparkles, title: "Merchandising Agent", desc: "Image enhancement, data cleansing and catalog improvement on autopilot." },
-  { icon: MessageSquare, title: "Customer Care Agent", desc: "Pre-empts customer queries, processes refunds and updates orders before issues escalate." },
+  { icon: ShoppingBag, title: "Merch Agent", desc: "Continuously merchandises your catalogue — pricing, positioning, bundles and promotions tuned in real time." },
+  { icon: ImageIcon, title: "Image Agent", desc: "Upscales, retouches, removes backgrounds and standardises product imagery at scale." },
+  { icon: Database, title: "Content Agent", desc: "Cleanses product data, writes descriptions and fills attribute gaps with on-brand copy." },
+  { icon: FolderInput, title: "Category Agent", desc: "Auto-classifies SKUs into the right categories and maintains a clean taxonomy as the catalogue grows." },
+  { icon: Languages, title: "Translation Agent", desc: "Localises content into any market with eCommerce-aware, on-brand translations." },
+  { icon: Headphones, title: "CS Agent", desc: "Pre-empts customer queries, processes refunds and updates orders before issues escalate." },
   { icon: RefreshCw, title: "Operations Agent", desc: "Stock, pricing, promotions and content updates — running 24/7 across your stack." },
   { icon: Workflow, title: "Orchestration Agent", desc: "Coordinates sub-agents, integrations and human approvals through a single control plane." },
 ];
