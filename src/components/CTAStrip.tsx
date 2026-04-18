@@ -9,7 +9,7 @@ const CTAStrip = () => (
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
         <div className="relative grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Ready to scale your commerce stack?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3">Ready to scale your commerce stack?</h2>
             <p className="text-muted-foreground max-w-xl">
               Talk to our team about your roadmap. We'll respond within one business day.
             </p>

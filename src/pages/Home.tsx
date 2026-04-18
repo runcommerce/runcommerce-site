@@ -68,7 +68,7 @@ const Home = () => (
       <div className="grid gap-12 lg:grid-cols-2 items-start">
         <div>
           <Eyebrow>The Problem</Eyebrow>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">The eCommerce operating model is broken.</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6">The eCommerce operating model is broken.</h2>
           <p className="text-muted-foreground text-lg">
             Existing growth models are killing margin. Transformation projects are slow and expensive. Manual effort dominates daily operations. Every change requires another supplier, another quote, another delay.
           </p>
@@ -93,7 +93,7 @@ const Home = () => (
     <Section className="border-t border-border">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <Eyebrow>What we do</Eyebrow>
-        <h2 className="text-4xl md:text-5xl font-bold">We do three things.</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">We do three things.</h2>
         <p className="mt-4 text-muted-foreground">A platform, an automation layer, and a managed services team — designed to work together as one AI operating system.</p>
       </div>
       <div className="grid gap-6 md:grid-cols-3">
@@ -113,7 +113,7 @@ const Home = () => (
       <div className="grid gap-12 lg:grid-cols-[1fr_1.5fr]">
         <div>
           <Eyebrow>Why we're different</Eyebrow>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">We don't replace your agency or your team.</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">We don't replace your agency or your team.</h2>
           <p className="text-muted-foreground">We disrupt the supplier-induced demand problem that's destroying eCommerce profitability — by automating the tasks and effort that consume your operations.</p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">
@@ -132,7 +132,7 @@ const Home = () => (
     <Section className="border-t border-border">
       <div className="text-center max-w-2xl mx-auto mb-12">
         <Eyebrow>Traction</Eyebrow>
-        <h2 className="text-4xl md:text-5xl font-bold">What we've achieved in 3 months.</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">What we've achieved in 3 months.</h2>
       </div>
       <div className="grid gap-6 md:grid-cols-3">
         {[
@@ -141,7 +141,7 @@ const Home = () => (
           { n: "Built", l: "Platform, automation & LinkCommerce" },
         ].map((s) => (
           <div key={s.l} className="rounded-2xl border border-border bg-card p-8 text-center">
-            <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">{s.n}</div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gradient mb-2">{s.n}</div>
             <div className="text-sm text-muted-foreground">{s.l}</div>
           </div>
         ))}
@@ -151,7 +151,7 @@ const Home = () => (
     {/* Founder quote */}
     <Section className="border-t border-border">
       <figure className="max-w-4xl mx-auto text-center">
-        <blockquote className="text-2xl md:text-4xl font-semibold leading-tight">
+        <blockquote className="text-xl sm:text-2xl md:text-4xl font-semibold leading-tight">
           "There are thousands of operational problems in eCommerce, and AI is finally capable of solving them. We have no moat to protect — which means we can compete with the A-league."
         </blockquote>
         <figcaption className="mt-8 text-sm text-muted-foreground">
@@ -164,7 +164,7 @@ const Home = () => (
     <Section className="border-t border-border">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <Eyebrow>Sectors</Eyebrow>
-        <h2 className="text-4xl md:text-5xl font-bold">Where we specialise.</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">Where we specialise.</h2>
         <p className="mt-4 text-muted-foreground">Decades of operator experience across the most demanding corners of eCommerce.</p>
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
