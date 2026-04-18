@@ -212,6 +212,14 @@ const Partners = () => (
             ],
           },
           {
+            category: "Platforms & Hosting",
+            items: [
+              { name: "osCommerce", domain: "oscommerce.com" },
+              { name: "Holbihost", domain: "holbi.co.uk" },
+              { name: "LinkCommerce (Datalink)" },
+            ],
+          },
+          {
             category: "Bespoke",
             items: [
               { name: "Inntact", domain: "inntact.com" },
