@@ -135,35 +135,108 @@ const Partners = () => (
         {[
           {
             category: "Payments & Fraud",
-            items: ["Stripe", "PayPal", "Elavon", "Adyen", "Worldpay", "Klarna", "Apple Pay", "Google Pay", "AIB Merchant Services", "Realex", "Sage Pay", "Authorize.Net"],
+            items: [
+              { name: "Stripe", slug: "stripe" },
+              { name: "PayPal", slug: "paypal" },
+              { name: "Elavon", slug: "elavon" },
+              { name: "Adyen", slug: "adyen" },
+              { name: "Worldpay" },
+              { name: "Klarna", slug: "klarna" },
+              { name: "Apple Pay", slug: "applepay" },
+              { name: "Google Pay", slug: "googlepay" },
+              { name: "AIB Merchant Services" },
+              { name: "Realex" },
+              { name: "Sage Pay", slug: "sage" },
+              { name: "Authorize.Net" },
+            ],
           },
           {
             category: "Shipping & Fulfilment",
-            items: ["DPD", "DHL", "UPS", "FedEx", "An Post", "Royal Mail", "Hermes", "ParcelForce", "Click & Collect", "Local Delivery Zones", "Per-Item Rates", "Free Shipping Rules"],
+            items: [
+              { name: "DPD", slug: "dpd" },
+              { name: "DHL", slug: "dhl" },
+              { name: "UPS", slug: "ups" },
+              { name: "FedEx", slug: "fedex" },
+              { name: "An Post" },
+              { name: "Royal Mail" },
+              { name: "Hermes" },
+              { name: "ParcelForce" },
+              { name: "Click & Collect" },
+              { name: "Local Delivery Zones" },
+              { name: "Per-Item Rates" },
+              { name: "Free Shipping Rules" },
+            ],
           },
           {
             category: "ERP & Accounting",
-            items: ["SAP", "Microsoft Dynamics 365", "NetSuite", "Sage", "Xero", "QuickBooks", "Odoo", "Exchequer", "Brightpearl", "Linnworks"],
+            items: [
+              { name: "SAP", slug: "sap" },
+              { name: "Microsoft Dynamics 365" },
+              { name: "NetSuite" },
+              { name: "Sage", slug: "sage" },
+              { name: "Xero", slug: "xero" },
+              { name: "QuickBooks", slug: "quickbooks" },
+              { name: "Odoo", slug: "odoo" },
+              { name: "Exchequer" },
+              { name: "Brightpearl" },
+              { name: "Linnworks" },
+            ],
           },
           {
             category: "Marketplaces & Channels",
-            items: ["Amazon", "eBay", "Etsy", "Google Shopping", "Facebook & Instagram Shops", "TikTok Shop", "Pinterest", "Channel Advisor"],
+            items: [
+              { name: "Amazon" },
+              { name: "eBay", slug: "ebay" },
+              { name: "Etsy", slug: "etsy" },
+              { name: "Google Shopping" },
+              { name: "Facebook & Instagram Shops", slug: "facebook" },
+              { name: "TikTok Shop", slug: "tiktok" },
+              { name: "Pinterest", slug: "pinterest" },
+              { name: "Channel Advisor" },
+            ],
           },
           {
             category: "Marketing & CRM",
-            items: ["Klaviyo", "Mailchimp", "HubSpot", "Salesforce", "Dotdigital", "Google Analytics 4", "Google Tag Manager", "Meta Pixel", "Hotjar"],
+            items: [
+              { name: "Klaviyo" },
+              { name: "Mailchimp", slug: "mailchimp" },
+              { name: "HubSpot", slug: "hubspot" },
+              { name: "Salesforce" },
+              { name: "Dotdigital" },
+              { name: "Google Analytics 4", slug: "googleanalytics" },
+              { name: "Google Tag Manager", slug: "googletagmanager" },
+              { name: "Meta Pixel", slug: "meta" },
+              { name: "Hotjar", slug: "hotjar" },
+            ],
           },
           {
             category: "Search, PIM & Reviews",
-            items: ["Algolia", "Elasticsearch", "Akeneo PIM", "Trustpilot", "Yotpo", "Feefo", "Reviews.io", "DeepL Translation"],
+            items: [
+              { name: "Algolia", slug: "algolia" },
+              { name: "Elasticsearch", slug: "elasticsearch" },
+              { name: "Akeneo PIM" },
+              { name: "Trustpilot", slug: "trustpilot" },
+              { name: "Yotpo" },
+              { name: "Feefo" },
+              { name: "Reviews.io" },
+              { name: "DeepL Translation", slug: "deepl" },
+            ],
           },
         ].map((cat) => (
           <div key={cat.category} className="rounded-2xl border border-border bg-card p-6 hover:border-primary/50 transition-colors">
             <h3 className="text-lg font-bold mb-4">{cat.category}</h3>
             <div className="flex flex-wrap gap-2">
               {cat.items.map((i) => (
-                <span key={i} className="text-xs px-3 py-1 rounded-full border border-border bg-background/60 text-muted-foreground">
-                  {i}
+                <span key={i.name} className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full border border-border bg-background/60 text-muted-foreground">
+                  {i.slug && (
+                    <img
+                      src={`https://cdn.simpleicons.org/${i.slug}/ffffff`}
+                      alt=""
+                      loading="lazy"
+                      className="h-3.5 w-auto opacity-80"
+                    />
+                  )}
+                  {i.name}
                 </span>
               ))}
             </div>
