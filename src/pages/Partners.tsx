@@ -5,31 +5,49 @@ import PageHero from "@/components/PageHero";
 import { Section, Eyebrow } from "@/components/Section";
 import CTAStrip from "@/components/CTAStrip";
 
-const tiers = [
+type Logo = { name: string; slug?: string };
+
+const tiers: { icon: typeof Cpu; eyebrow: string; title: string; desc: string; partners: Logo[] }[] = [
   {
     icon: Cpu,
     eyebrow: "Technology Partners",
     title: "Best-in-class tech, pre-integrated.",
     desc: "Payments, fraud, search, CDP and AI providers we ship with out of the box.",
-    partners: ["Stripe", "PayPal", "Elavon"],
+    partners: [
+      { name: "Stripe", slug: "stripe" },
+      { name: "PayPal", slug: "paypal" },
+      { name: "Elavon" },
+    ],
   },
   {
     icon: Plug,
     eyebrow: "Implementation Partners",
     title: "Trusted delivery teams.",
     desc: "Agencies and systems integrators certified to deliver on the RunCommerce stack.",
-    partners: ["Holbi", "Add your agency"],
+    partners: [
+      { name: "Holbi" },
+      { name: "Add your agency" },
+    ],
   },
   {
     icon: Handshake,
     eyebrow: "Strategic Partners",
     title: "Joint go-to-market.",
     desc: "Long-term alliances co-investing in product, services and customer success.",
-    partners: ["Standfast Partners"],
+    partners: [
+      { name: "Standfast Partners" },
+    ],
   },
 ];
 
-const logos = ["Stripe", "PayPal", "Elavon", "Holbi", "Standfast Partners", "Lovable Cloud"];
+const logos: Logo[] = [
+  { name: "Stripe", slug: "stripe" },
+  { name: "PayPal", slug: "paypal" },
+  { name: "Elavon" },
+  { name: "Holbi" },
+  { name: "Standfast Partners" },
+  { name: "Lovable Cloud" },
+];
 
 const Partners = () => (
   <>
@@ -48,10 +66,25 @@ const Partners = () => (
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
         {logos.map((l) => (
           <div
-            key={l}
-            className="rounded-2xl border border-border bg-card/60 backdrop-blur h-20 flex items-center justify-center text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
+            key={l.name}
+            title={l.name}
+            className="group rounded-2xl border border-border bg-card/60 backdrop-blur h-24 flex flex-col items-center justify-center gap-2 px-3 hover:border-primary/40 hover:bg-card transition-colors"
           >
-            {l}
+            {l.slug ? (
+              <img
+                src={`https://cdn.simpleicons.org/${l.slug}/ffffff`}
+                alt={`${l.name} logo`}
+                loading="lazy"
+                className="h-8 w-auto max-w-[60%] opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            ) : (
+              <div className="h-8 flex items-center justify-center text-base font-bold text-foreground/90 text-center leading-tight">
+                {l.name}
+              </div>
+            )}
+            <span className="text-[10px] uppercase tracking-wider text-muted-foreground text-center leading-tight">
+              {l.name}
+            </span>
           </div>
         ))}
       </div>
@@ -73,8 +106,16 @@ const Partners = () => (
             <p className="text-sm text-muted-foreground mb-6">{t.desc}</p>
             <div className="mt-auto flex flex-wrap gap-2">
               {t.partners.map((p) => (
-                <span key={p} className="text-xs px-3 py-1 rounded-full border border-border bg-background/60 text-muted-foreground">
-                  {p}
+                <span key={p.name} className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full border border-border bg-background/60 text-muted-foreground">
+                  {p.slug && (
+                    <img
+                      src={`https://cdn.simpleicons.org/${p.slug}/ffffff`}
+                      alt=""
+                      loading="lazy"
+                      className="h-3.5 w-auto opacity-80"
+                    />
+                  )}
+                  {p.name}
                 </span>
               ))}
             </div>
