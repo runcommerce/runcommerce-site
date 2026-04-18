@@ -170,12 +170,14 @@ const Partners = () => (
           {
             category: "ERP & Accounting",
             items: [
-              { name: "SAP", slug: "sap" },
-              { name: "Microsoft Dynamics 365", domain: "dynamics.microsoft.com" },
-              { name: "NetSuite", domain: "netsuite.com" },
               { name: "Sage", slug: "sage" },
+              { name: "SAP Business One", slug: "sap" },
+              { name: "MYOB", domain: "myob.com" },
+              { name: "Oracle NetSuite", domain: "netsuite.com" },
               { name: "Xero", slug: "xero" },
+              { name: "Microsoft Exchange", domain: "exchange.microsoft.com" },
               { name: "QuickBooks", slug: "quickbooks" },
+              { name: "Microsoft Dynamics 365", domain: "dynamics.microsoft.com" },
               { name: "Odoo", slug: "odoo" },
               { name: "Exchequer", domain: "advanced.com" },
               { name: "Brightpearl", domain: "brightpearl.com" },
