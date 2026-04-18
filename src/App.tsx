@@ -10,6 +10,7 @@ import Automation from "./pages/Automation";
 import Services from "./pages/Services";
 import LinkCommerce from "./pages/LinkCommerce";
 import About from "./pages/About";
+import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
