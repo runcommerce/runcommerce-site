@@ -69,36 +69,38 @@ const About = () => (
         {[
           { name: "Samsung", slug: "samsung" },
           { name: "Apple", slug: "apple" },
-          { name: "SuperValu" },
-          { name: "AA" },
-          { name: "Dunnes Stores" },
-          { name: "Musgrave" },
-          { name: "Heineken" },
-          { name: "eir" },
-          { name: "Digicel" },
-        ].map((b: { name: string; slug?: string }) => (
-          <div
-            key={b.name}
-            title={b.name}
-            className="group rounded-xl border border-border bg-card/60 backdrop-blur h-20 flex flex-col items-center justify-center gap-1.5 px-2 hover:border-primary/40 hover:bg-card transition-colors"
-          >
-            {b.slug ? (
-              <img
-                src={`https://cdn.simpleicons.org/${b.slug}/ffffff`}
-                alt={`${b.name} logo`}
-                loading="lazy"
-                className="h-7 w-auto max-w-[60%] opacity-80 group-hover:opacity-100 transition-opacity"
-              />
-            ) : (
-              <div className="h-7 flex items-center justify-center text-sm font-bold text-foreground/90">
-                {b.name}
-              </div>
-            )}
-            <span className="text-[10px] uppercase tracking-wider text-muted-foreground text-center leading-tight">
-              {b.name}
-            </span>
-          </div>
-        ))}
+          { name: "SuperValu", domain: "supervalu.ie" },
+          { name: "AA", domain: "theaa.ie" },
+          { name: "Dunnes Stores", domain: "dunnesstores.com" },
+          { name: "Musgrave", domain: "musgravegroup.com" },
+          { name: "Heineken", slug: "heineken" },
+          { name: "eir", domain: "eir.ie" },
+          { name: "Digicel", domain: "digicelgroup.com" },
+        ].map((b: { name: string; slug?: string; domain?: string }) => {
+          const src = b.slug
+            ? `https://cdn.simpleicons.org/${b.slug}/ffffff`
+            : b.domain
+              ? `https://www.google.com/s2/favicons?domain=${b.domain}&sz=128`
+              : undefined;
+          return (
+            <div
+              key={b.name}
+              title={b.name}
+              className="group rounded-xl border border-border bg-card/60 backdrop-blur h-20 flex items-center justify-center px-4 hover:border-primary/40 hover:bg-card transition-colors"
+            >
+              {src ? (
+                <img
+                  src={src}
+                  alt={`${b.name} logo`}
+                  loading="lazy"
+                  className="max-h-10 w-auto max-w-[80%] opacity-80 group-hover:opacity-100 transition-opacity"
+                />
+              ) : (
+                <span className="text-sm font-bold text-foreground/90">{b.name}</span>
+              )}
+            </div>
+          );
+        })}
       </div>
     </Section>
 
