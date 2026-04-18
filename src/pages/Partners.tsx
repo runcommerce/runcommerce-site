@@ -219,6 +219,23 @@ const Partners = () => (
             ],
           },
           {
+            category: "Brands Powered by RunCommerce",
+            items: [
+              { name: "Samsung", slug: "samsung" },
+              { name: "Exertis", domain: "exertis.com" },
+              { name: "Telenco", domain: "telenco.com" },
+              { name: "Double Alpha Academy", domain: "doublealpha.eu" },
+              { name: "eir", domain: "eir.ie" },
+              { name: "Flogas", domain: "flogas.ie" },
+              { name: "SSE Airtricity eStore", domain: "sseairtricity.com" },
+              { name: "Hypertec", domain: "hypertec.com" },
+              { name: "Lomond", domain: "lomond.com" },
+              { name: "TacStore", domain: "tacstore.ie" },
+              { name: "Flexson", domain: "flexson.com" },
+              { name: "Wristbands Malta", domain: "wristbands.com.mt" },
+            ],
+          },
+          {
             category: "Search, PIM & Reviews",
             items: [
               { name: "Algolia", slug: "algolia" },
