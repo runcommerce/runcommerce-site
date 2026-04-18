@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import logoIcon from "@/assets/logo-icon.png";
+import logoWordmark from "@/assets/logo-wordmark.svg";
 
 const Footer = () => (
   <footer className="border-t border-border bg-background">
     <div className="container py-16 grid gap-12 md:grid-cols-4">
       <div className="md:col-span-2">
-        <Link to="/" className="flex items-center gap-2 font-bold text-lg">
-          <img src={logoIcon} alt="RunCommerce" className="h-8 w-8" width={32} height={32} loading="lazy" />
-          <span>RunCommerce</span>
+        <Link to="/" className="flex items-center" aria-label="RunCommerce home">
+          <img src={logoWordmark} alt="RunCommerce" className="h-8 w-auto" loading="lazy" />
         </Link>
         <p className="mt-4 text-sm text-muted-foreground max-w-sm">
           Scalable B2B ecommerce platforms, enterprise integrations, and managed hosting for ambitious brands.
