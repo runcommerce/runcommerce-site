@@ -13,7 +13,7 @@ const PageHero = ({ eyebrow, title, description }: PageHeroProps) => (
     <div className="container relative">
       <div className="max-w-3xl animate-fade-up">
         <Eyebrow>{eyebrow}</Eyebrow>
-        <h1 className="text-4xl md:text-6xl font-bold leading-[1.05] mb-6">{title}</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6 break-words hyphens-auto">{title}</h1>
         <p className="text-lg text-muted-foreground max-w-2xl">{description}</p>
       </div>
     </div>

@@ -27,7 +27,7 @@ const Home = () => (
       <div className="container relative grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center py-20">
         <div className="animate-fade-up">
           <Eyebrow>RunCommerce — The AI Operating System for eCommerce</Eyebrow>
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.02] mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6 break-words hyphens-auto">
             Making eCommerce <span className="text-gradient">profitable</span> with AI.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8">
@@ -42,22 +42,22 @@ const Home = () => (
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6 animate-fade-up">
-          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">€10B</div>
-            <div className="mt-2 text-sm text-muted-foreground">Online sales delivered by our team</div>
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 animate-fade-up">
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-5 sm:p-8">
+            <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gradient leading-none">€10B</div>
+            <div className="mt-2 text-xs sm:text-sm text-muted-foreground">Online sales delivered by our team</div>
           </div>
-          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">90%</div>
-            <div className="mt-2 text-sm text-muted-foreground">Of manual eCommerce tasks automatable</div>
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-5 sm:p-8">
+            <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gradient leading-none">90%</div>
+            <div className="mt-2 text-xs sm:text-sm text-muted-foreground">Of manual eCommerce tasks automatable</div>
           </div>
-          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">7 min</div>
-            <div className="mt-2 text-sm text-muted-foreground">To launch a new store, fully integrated</div>
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-5 sm:p-8">
+            <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gradient leading-none">7 min</div>
+            <div className="mt-2 text-xs sm:text-sm text-muted-foreground">To launch a new store, fully integrated</div>
           </div>
-          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">25 yrs</div>
-            <div className="mt-2 text-sm text-muted-foreground">Combined eCommerce leadership</div>
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-5 sm:p-8">
+            <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gradient leading-none">25 yrs</div>
+            <div className="mt-2 text-xs sm:text-sm text-muted-foreground">Combined eCommerce leadership</div>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ const Home = () => (
       <div className="grid gap-12 lg:grid-cols-2 items-start">
         <div>
           <Eyebrow>The Problem</Eyebrow>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">The eCommerce operating model is broken.</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6">The eCommerce operating model is broken.</h2>
           <p className="text-muted-foreground text-lg">
             Existing growth models are killing margin. Transformation projects are slow and expensive. Manual effort dominates daily operations. Every change requires another supplier, another quote, another delay.
           </p>
@@ -93,7 +93,7 @@ const Home = () => (
     <Section className="border-t border-border">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <Eyebrow>What we do</Eyebrow>
-        <h2 className="text-4xl md:text-5xl font-bold">We do three things.</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">We do three things.</h2>
         <p className="mt-4 text-muted-foreground">A platform, an automation layer, and a managed services team — designed to work together as one AI operating system.</p>
       </div>
       <div className="grid gap-6 md:grid-cols-3">
@@ -113,7 +113,7 @@ const Home = () => (
       <div className="grid gap-12 lg:grid-cols-[1fr_1.5fr]">
         <div>
           <Eyebrow>Why we're different</Eyebrow>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">We don't replace your agency or your team.</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">We don't replace your agency or your team.</h2>
           <p className="text-muted-foreground">We disrupt the supplier-induced demand problem that's destroying eCommerce profitability — by automating the tasks and effort that consume your operations.</p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">
@@ -132,7 +132,7 @@ const Home = () => (
     <Section className="border-t border-border">
       <div className="text-center max-w-2xl mx-auto mb-12">
         <Eyebrow>Traction</Eyebrow>
-        <h2 className="text-4xl md:text-5xl font-bold">What we've achieved in 3 months.</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">What we've achieved in 3 months.</h2>
       </div>
       <div className="grid gap-6 md:grid-cols-3">
         {[
@@ -141,7 +141,7 @@ const Home = () => (
           { n: "Built", l: "Platform, automation & LinkCommerce" },
         ].map((s) => (
           <div key={s.l} className="rounded-2xl border border-border bg-card p-8 text-center">
-            <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">{s.n}</div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gradient mb-2">{s.n}</div>
             <div className="text-sm text-muted-foreground">{s.l}</div>
           </div>
         ))}
@@ -151,7 +151,7 @@ const Home = () => (
     {/* Founder quote */}
     <Section className="border-t border-border">
       <figure className="max-w-4xl mx-auto text-center">
-        <blockquote className="text-2xl md:text-4xl font-semibold leading-tight">
+        <blockquote className="text-xl sm:text-2xl md:text-4xl font-semibold leading-tight">
           "There are thousands of operational problems in eCommerce, and AI is finally capable of solving them. We have no moat to protect — which means we can compete with the A-league."
         </blockquote>
         <figcaption className="mt-8 text-sm text-muted-foreground">
@@ -164,7 +164,7 @@ const Home = () => (
     <Section className="border-t border-border">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <Eyebrow>Sectors</Eyebrow>
-        <h2 className="text-4xl md:text-5xl font-bold">Where we specialise.</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">Where we specialise.</h2>
         <p className="mt-4 text-muted-foreground">Decades of operator experience across the most demanding corners of eCommerce.</p>
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
