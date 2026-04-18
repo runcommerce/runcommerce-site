@@ -61,6 +61,39 @@ const LinkCommerce = () => (
       </div>
     </Section>
 
+    {/* Integrations logo board */}
+    <Section className="border-t border-border">
+      <div className="max-w-2xl mb-12">
+        <Eyebrow>Integrations we've delivered</Eyebrow>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">A logo board of what's already wired up.</h2>
+        <p className="mt-4 text-muted-foreground">
+          Years of platform engineering across payments, shipping, ERP, marketplaces, marketing and more — all available through LinkCommerce out of the box.
+        </p>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+        {[
+          "Stripe", "PayPal", "Elavon", "Adyen", "Worldpay", "Klarna",
+          "Apple Pay", "Google Pay", "Realex", "Sage Pay", "Authorize.Net", "AIB MS",
+          "DPD", "DHL", "UPS", "FedEx", "An Post", "Royal Mail",
+          "Hermes", "ParcelForce", "SAP", "MS Dynamics 365", "NetSuite", "Sage",
+          "Xero", "QuickBooks", "Odoo", "Brightpearl", "Linnworks", "Akeneo PIM",
+          "Algolia", "Elasticsearch", "Klaviyo", "Mailchimp", "HubSpot", "Salesforce",
+          "Dotdigital", "GA4", "GTM", "Meta Pixel", "Amazon", "eBay",
+          "Etsy", "Google Shopping", "TikTok Shop", "Trustpilot", "Yotpo", "DeepL",
+        ].map((logo) => (
+          <div
+            key={logo}
+            className="rounded-xl border border-border bg-card/60 backdrop-blur h-16 flex items-center justify-center text-xs sm:text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors text-center px-2"
+          >
+            {logo}
+          </div>
+        ))}
+      </div>
+      <p className="text-center text-sm text-muted-foreground mt-8">
+        Plus any system with an API — LinkCommerce can wire it up.
+      </p>
+    </Section>
+
     <CTAStrip />
   </>
 );
