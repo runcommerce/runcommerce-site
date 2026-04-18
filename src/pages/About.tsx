@@ -73,7 +73,7 @@ const About = () => (
           { name: "AA" },
           { name: "Dunnes Stores" },
           { name: "Musgrave" },
-          { name: "Heineken", slug: "heineken" },
+          { name: "Heineken" },
           { name: "eir" },
           { name: "Digicel" },
         ].map((b: { name: string; slug?: string }) => (
