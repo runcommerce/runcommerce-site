@@ -6,10 +6,11 @@ import { cn } from "@/lib/utils";
 import logoWordmark from "@/assets/logo-wordmark.svg";
 
 const links = [
-  { to: "/ecommerce", label: "E-commerce" },
-  { to: "/b2b", label: "B2B Enterprise" },
-  { to: "/hosting", label: "Hosting" },
-  { to: "/datalink", label: "Datalink" },
+  { to: "/platform", label: "Platform" },
+  { to: "/automation", label: "AI Automation" },
+  { to: "/services", label: "Managed Services" },
+  { to: "/linkcommerce", label: "LinkCommerce" },
+  { to: "/about", label: "About" },
 ];
 
 const Navbar = () => {
