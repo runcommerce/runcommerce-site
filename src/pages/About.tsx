@@ -69,7 +69,6 @@ const About = () => (
         {[
           { name: "Samsung", slug: "samsung" },
           { name: "Apple", slug: "apple" },
-          { name: "ESW" },
           { name: "SuperValu" },
           { name: "AA" },
           { name: "Dunnes Stores" },
@@ -77,7 +76,6 @@ const About = () => (
           { name: "Heineken", slug: "heineken" },
           { name: "eir" },
           { name: "Digicel" },
-          { name: "Holbi" },
         ].map((b: { name: string; slug?: string }) => (
           <div
             key={b.name}
