@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Bot, Boxes, Layers, Rocket, ShieldCheck, Sparkles, Workflow, Zap } from "lucide-react";
+import { ArrowRight, Bot, Boxes, Globe, Layers, Package, Rocket, ShieldCheck, ShoppingBag, Smartphone, Sparkles, Store, Timer, Truck, Workflow, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, Eyebrow } from "@/components/Section";
 import CTAStrip from "@/components/CTAStrip";
@@ -158,6 +158,32 @@ const Home = () => (
           <span className="font-semibold text-foreground">Eamonn Grant</span> · Founder & CEO, RunCommerce
         </figcaption>
       </figure>
+    </Section>
+
+    {/* Sectors */}
+    <Section className="border-t border-border">
+      <div className="text-center max-w-2xl mx-auto mb-16">
+        <Eyebrow>Sectors</Eyebrow>
+        <h2 className="text-4xl md:text-5xl font-bold">Where we specialise.</h2>
+        <p className="mt-4 text-muted-foreground">Decades of operator experience across the most demanding corners of eCommerce.</p>
+      </div>
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { icon: ShoppingBag, title: "Direct to Consumer", desc: "Brand-led DTC stores built to convert, retain and scale." },
+          { icon: Smartphone, title: "Consumer Electronics", desc: "Complex catalogues, configurators, warranties and trade-in flows." },
+          { icon: Truck, title: "Distributor eCommerce", desc: "Multi-tier pricing, account hierarchies and rep-assisted ordering." },
+          { icon: Package, title: "Wholesale eCommerce", desc: "B2B portals with quotes, contracts, credit terms and bulk ordering." },
+          { icon: Timer, title: "Flash Sales, Drops & Auctions", desc: "High-traffic launches, queueing, timed releases and bidding mechanics." },
+          { icon: Globe, title: "Global / International Expansion", desc: "Multi-currency, multi-language, tax and localisation across regions." },
+          { icon: Store, title: "POS / Retail & Pop Ups", desc: "Unified commerce across stores, pop-ups and online with one stack." },
+        ].map((s) => (
+          <div key={s.title} className="rounded-2xl border border-border bg-card p-6 hover:border-primary/50 hover:-translate-y-1 transition-all duration-300">
+            <s.icon className="h-8 w-8 text-primary mb-3" />
+            <h3 className="text-lg font-bold mb-1">{s.title}</h3>
+            <p className="text-sm text-muted-foreground">{s.desc}</p>
+          </div>
+        ))}
+      </div>
     </Section>
 
     <CTAStrip />
