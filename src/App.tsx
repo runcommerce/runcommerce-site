@@ -10,6 +10,7 @@ import Automation from "./pages/Automation";
 import Services from "./pages/Services";
 import LinkCommerce from "./pages/LinkCommerce";
 import About from "./pages/About";
+import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/linkcommerce" element={<LinkCommerce />} />
             <Route path="/about" element={<About />} />
+            <Route path="/partners" element={<Partners />} />
             <Route path="/contact" element={<Contact />} />
             {/* Legacy redirects */}
             <Route path="/ecommerce" element={<Platform />} />

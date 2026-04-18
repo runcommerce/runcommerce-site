@@ -11,6 +11,7 @@ const links = [
   { to: "/services", label: "Managed Services" },
   { to: "/linkcommerce", label: "LinkCommerce" },
   { to: "/about", label: "About" },
+  { to: "/partners", label: "Partners" },
 ];
 
 const Navbar = () => {
