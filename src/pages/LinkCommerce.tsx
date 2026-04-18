@@ -74,42 +74,125 @@ const LinkCommerce = () => (
         {[
           {
             category: "Platforms",
-            items: ["Shopify", "Magento / Adobe Commerce", "BigCommerce", "Salesforce Commerce Cloud", "WooCommerce", "osCommerce", "RunCommerce", "Custom"],
+            items: [
+              { name: "Shopify", slug: "shopify" },
+              { name: "Adobe Commerce", slug: "adobe" },
+              { name: "BigCommerce", slug: "bigcommerce" },
+              { name: "Salesforce", slug: "salesforce" },
+              { name: "WooCommerce", slug: "woocommerce" },
+              { name: "osCommerce" },
+              { name: "RunCommerce" },
+              { name: "Custom" },
+            ],
           },
           {
             category: "Logistics",
-            items: ["DPD", "DHL", "UPS", "FedEx", "An Post", "Royal Mail", "Hermes", "ParcelForce", "GLS", "Click & Collect"],
+            items: [
+              { name: "DPD", slug: "dpd" },
+              { name: "DHL", slug: "dhl" },
+              { name: "UPS", slug: "ups" },
+              { name: "FedEx", slug: "fedex" },
+              { name: "An Post" },
+              { name: "Royal Mail", slug: "royalmail" },
+              { name: "Hermes" },
+              { name: "ParcelForce" },
+              { name: "GLS" },
+              { name: "Click & Collect" },
+            ],
           },
           {
             category: "Payments",
-            items: ["Stripe", "PayPal", "Elavon", "Adyen", "Worldpay", "Klarna", "Apple Pay", "Google Pay", "Realex", "Sage Pay", "Authorize.Net", "AIB MS"],
+            items: [
+              { name: "Stripe", slug: "stripe" },
+              { name: "PayPal", slug: "paypal" },
+              { name: "Elavon" },
+              { name: "Adyen", slug: "adyen" },
+              { name: "Worldpay", slug: "worldpay" },
+              { name: "Klarna", slug: "klarna" },
+              { name: "Apple Pay", slug: "applepay" },
+              { name: "Google Pay", slug: "googlepay" },
+              { name: "Realex" },
+              { name: "Sage Pay" },
+              { name: "Authorize.Net", slug: "authorizedotnet" },
+              { name: "AIB MS" },
+            ],
           },
           {
             category: "Finance",
-            items: ["SAP", "Microsoft Dynamics 365", "NetSuite", "Sage", "Xero", "QuickBooks", "Odoo", "Exchequer"],
+            items: [
+              { name: "SAP", slug: "sap" },
+              { name: "MS Dynamics 365" },
+              { name: "NetSuite", slug: "oracle" },
+              { name: "Sage", slug: "sage" },
+              { name: "Xero", slug: "xero" },
+              { name: "QuickBooks", slug: "quickbooks" },
+              { name: "Odoo", slug: "odoo" },
+              { name: "Exchequer" },
+            ],
           },
           {
             category: "Marketplaces",
-            items: ["Amazon", "eBay", "Etsy", "Google Shopping", "Facebook & Instagram Shops", "TikTok Shop", "Pinterest", "ChannelAdvisor"],
+            items: [
+              { name: "Amazon", slug: "amazon" },
+              { name: "eBay", slug: "ebay" },
+              { name: "Etsy", slug: "etsy" },
+              { name: "Google Shopping", slug: "google" },
+              { name: "Meta Shops", slug: "meta" },
+              { name: "TikTok Shop", slug: "tiktok" },
+              { name: "Pinterest", slug: "pinterest" },
+              { name: "ChannelAdvisor" },
+            ],
           },
           {
             category: "Distributors",
-            items: ["Exertis", "Tech Data", "Ingram Micro", "Westcoast", "DCC", "Musgrave", "BWG"],
+            items: [
+              { name: "Exertis" },
+              { name: "Tech Data" },
+              { name: "Ingram Micro" },
+              { name: "Westcoast" },
+              { name: "DCC" },
+              { name: "Musgrave" },
+              { name: "BWG" },
+            ],
           },
           {
             category: "Analytics & Tracking",
-            items: ["Google Analytics 4", "Google Tag Manager", "Meta Pixel", "TikTok Pixel", "Hotjar", "Microsoft Clarity", "Segment", "Looker Studio"],
+            items: [
+              { name: "Google Analytics", slug: "googleanalytics" },
+              { name: "Google Tag Manager", slug: "googletagmanager" },
+              { name: "Meta Pixel", slug: "meta" },
+              { name: "TikTok Pixel", slug: "tiktok" },
+              { name: "Hotjar", slug: "hotjar" },
+              { name: "MS Clarity" },
+              { name: "Segment", slug: "segment" },
+              { name: "Looker Studio", slug: "looker" },
+            ],
           },
         ].map((cat) => (
           <div key={cat.category}>
             <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">{cat.category}</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-              {cat.items.map((logo) => (
+              {cat.items.map((logo: { name: string; slug?: string }) => (
                 <div
-                  key={logo}
-                  className="rounded-xl border border-border bg-card/60 backdrop-blur h-16 flex items-center justify-center text-xs sm:text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors text-center px-2"
+                  key={logo.name}
+                  title={logo.name}
+                  className="group rounded-xl border border-border bg-card/60 backdrop-blur h-20 flex flex-col items-center justify-center gap-1.5 px-2 hover:border-primary/40 hover:bg-card transition-colors"
                 >
-                  {logo}
+                  {logo.slug ? (
+                    <img
+                      src={`https://cdn.simpleicons.org/${logo.slug}/ffffff`}
+                      alt={`${logo.name} logo`}
+                      loading="lazy"
+                      className="h-7 w-auto max-w-[60%] opacity-80 group-hover:opacity-100 transition-opacity"
+                    />
+                  ) : (
+                    <div className="h-7 flex items-center justify-center text-sm font-bold text-foreground/90">
+                      {logo.name}
+                    </div>
+                  )}
+                  <span className="text-[10px] uppercase tracking-wider text-muted-foreground text-center leading-tight">
+                    {logo.name}
+                  </span>
                 </div>
               ))}
             </div>
