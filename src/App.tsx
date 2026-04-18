@@ -30,6 +30,7 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/linkcommerce" element={<LinkCommerce />} />
             <Route path="/about" element={<About />} />
+            <Route path="/partners" element={<Partners />} />
             <Route path="/contact" element={<Contact />} />
             {/* Legacy redirects */}
             <Route path="/ecommerce" element={<Platform />} />
