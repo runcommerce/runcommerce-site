@@ -9,6 +9,7 @@ import Platform from "./pages/Platform";
 import Automation from "./pages/Automation";
 import Services from "./pages/Services";
 import LinkCommerce from "./pages/LinkCommerce";
+import HostCommerce from "./pages/HostCommerce";
 import About from "./pages/About";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/automation" element={<Automation />} />
             <Route path="/services" element={<Services />} />
             <Route path="/linkcommerce" element={<LinkCommerce />} />
+            <Route path="/hostcommerce" element={<HostCommerce />} />
             <Route path="/about" element={<About />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/contact" element={<Contact />} />
