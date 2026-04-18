@@ -25,11 +25,11 @@ const tiers = [
     eyebrow: "Strategic Partners",
     title: "Joint go-to-market.",
     desc: "Long-term alliances co-investing in product, services and customer success.",
-    partners: ["Coming soon"],
+    partners: ["Standfast Partners"],
   },
 ];
 
-const logos = ["Stripe", "PayPal", "Elavon", "Holbi", "Lovable Cloud", "Your brand"];
+const logos = ["Stripe", "PayPal", "Elavon", "Holbi", "Standfast Partners", "Lovable Cloud"];
 
 const Partners = () => (
   <>
