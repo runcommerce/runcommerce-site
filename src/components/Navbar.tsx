@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import logoWordmark from "@/assets/logo-wordmark.svg";
 
-const links = [
+const links: { to: string; label: string; external?: boolean }[] = [
   { to: "/platform", label: "Platform" },
   { to: "/automation", label: "AI Automation" },
   { to: "/services", label: "Managed Services" },
