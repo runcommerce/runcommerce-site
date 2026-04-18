@@ -1,190 +1,161 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Boxes, Cloud, Database, ShoppingCart, Sparkles, Workflow, ShieldCheck, Rocket } from "lucide-react";
+import { ArrowRight, Bot, Boxes, Layers, Rocket, ShieldCheck, Sparkles, Workflow, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, Eyebrow } from "@/components/Section";
 import CTAStrip from "@/components/CTAStrip";
 import hero from "@/assets/hero.jpg";
 
-const services = [
-  { to: "/ecommerce", icon: ShoppingCart, title: "E-commerce Development", desc: "Custom storefronts engineered for performance and conversion." },
-  { to: "/b2b", icon: Boxes, title: "B2B Enterprise", desc: "Multi-store, tiered pricing, ERP & PIM integrations at scale." },
-  { to: "/hosting", icon: Cloud, title: "Managed Hosting", desc: "Hardened, observable infrastructure with 99.99% uptime SLA." },
-  { to: "/datalink", icon: Database, title: "Datalink", desc: "Real-time data sync between your shop, ERP and warehouse." },
+const pillars = [
+  { to: "/platform", icon: Boxes, title: "RunCommerce Platform", desc: "All the tools to run an online store — Click & Collect, Pre-order, POS, multi-currency, B2B and more. Launch a new site in 7 minutes." },
+  { to: "/automation", icon: Bot, title: "AI Automation Layer", desc: "Agentic operations that automate 90%+ of day-to-day eCommerce tasks across any stack. Pre-empt issues before customers ask." },
+  { to: "/services", icon: Sparkles, title: "AI Managed Services", desc: "World-class team paired with our platform to deliver complex transformation work — flexibly and at lower cost." },
 ];
 
-const steps = [
-  { icon: Sparkles, title: "Discover", desc: "We map your goals, audit your current stack and define success metrics." },
-  { icon: Workflow, title: "Design", desc: "Architecture, UX and integrations planned end-to-end before a line of code." },
-  { icon: Rocket, title: "Deliver", desc: "Iterative releases with measurable impact at every milestone." },
-  { icon: ShieldCheck, title: "Operate", desc: "Managed hosting, monitoring and continuous improvement." },
-];
-
-const cases = [
-  { brand: "Northwave", tag: "B2B Wholesale", color: "from-cyan-500/20 to-blue-500/10" },
-  { brand: "Forge & Co", tag: "Industrial Supply", color: "from-emerald-500/20 to-cyan-500/10" },
-  { brand: "Lumen Labs", tag: "Electronics", color: "from-purple-500/20 to-pink-500/10" },
+const why = [
+  { icon: Zap, title: "Enterprise-grade AI", desc: "AI capability previously reserved for the A-league, accessible to every merchant." },
+  { icon: Workflow, title: "Deep eCommerce ops", desc: "Decades of operator experience baked into every workflow and agent." },
+  { icon: ShieldCheck, title: "Always-on managed service", desc: "We don't replace your team or agency — we eliminate the supplier-induced demand killing margin." },
+  { icon: Rocket, title: "Rapid deployment", desc: "Go live in minutes. Migrate from any platform with our LinkCommerce orchestration layer." },
 ];
 
 const Home = () => (
   <>
     {/* Hero */}
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
-      <img src={hero} alt="Abstract enterprise network visualization" className="absolute inset-0 w-full h-full object-cover opacity-50" />
+      <img src={hero} alt="RunCommerce AI operating system" className="absolute inset-0 w-full h-full object-cover opacity-50" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
       <div className="container relative grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center py-20">
         <div className="animate-fade-up">
-          <Eyebrow>RunCommerce — B2B Commerce Engineering</Eyebrow>
+          <Eyebrow>RunCommerce — The AI Operating System for eCommerce</Eyebrow>
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.02] mb-6">
-            Scalable <span className="text-gradient">B2B Ecommerce</span> Platforms
+            Making eCommerce <span className="text-gradient">profitable</span> with AI.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8">
-            We design, build and operate enterprise commerce platforms for brands that refuse to compromise on performance, control or scale.
+            ROI in eCommerce is brutal. Platforms are costly, manual effort eats up to 45% of cost, and integrations drag on for months. RunCommerce fixes all three with an AI-native platform, automation layer and managed services.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button asChild size="lg">
-              <Link to="/contact">Start a project <ArrowRight className="ml-1" /></Link>
+              <Link to="/contact">Talk to us <ArrowRight className="ml-1" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link to="/b2b">Explore B2B</Link>
+              <Link to="/platform">See the platform</Link>
             </Button>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-6 animate-fade-up">
           <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">25+</div>
-            <div className="mt-2 text-sm text-muted-foreground">Years building commerce</div>
+            <div className="text-5xl md:text-6xl font-bold text-gradient">€10B</div>
+            <div className="mt-2 text-sm text-muted-foreground">Online sales delivered by our team</div>
           </div>
           <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">5,000+</div>
-            <div className="mt-2 text-sm text-muted-foreground">Projects shipped worldwide</div>
+            <div className="text-5xl md:text-6xl font-bold text-gradient">90%</div>
+            <div className="mt-2 text-sm text-muted-foreground">Of manual eCommerce tasks automatable</div>
           </div>
-          <div className="col-span-2 rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-sm text-muted-foreground mb-2">Trusted by teams at</div>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-foreground/70 font-semibold">
-              <span>NORTHWAVE</span><span>FORGE&CO</span><span>LUMEN</span><span>VECTRA</span>
-            </div>
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
+            <div className="text-5xl md:text-6xl font-bold text-gradient">7 min</div>
+            <div className="mt-2 text-sm text-muted-foreground">To launch a new store, fully integrated</div>
+          </div>
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
+            <div className="text-5xl md:text-6xl font-bold text-gradient">25 yrs</div>
+            <div className="mt-2 text-sm text-muted-foreground">Combined eCommerce leadership</div>
           </div>
         </div>
       </div>
     </section>
 
-    {/* Platform highlight */}
+    {/* The problem */}
     <Section className="border-t border-border">
-      <div className="grid gap-16 lg:grid-cols-2 items-center">
+      <div className="grid gap-12 lg:grid-cols-2 items-start">
         <div>
-          <Eyebrow>The RunCommerce Platform</Eyebrow>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">A modern foundation for serious B2B commerce.</h2>
-          <p className="text-muted-foreground text-lg mb-8">
-            Headless architecture, multi-store support, role-based catalogs and bulk ordering — out of the box. Extend with your own services or plug into ours.
+          <Eyebrow>The Problem</Eyebrow>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">The eCommerce operating model is broken.</h2>
+          <p className="text-muted-foreground text-lg">
+            Existing growth models are killing margin. Transformation projects are slow and expensive. Manual effort dominates daily operations. Every change requires another supplier, another quote, another delay.
           </p>
-          <div className="grid grid-cols-3 gap-6">
-            {[{n:"99.99%",l:"Uptime"},{n:"<150ms",l:"TTFB p95"},{n:"30+",l:"Integrations"}].map(s=>(
-              <div key={s.l}>
-                <div className="text-2xl md:text-3xl font-bold text-gradient">{s.n}</div>
-                <div className="text-xs text-muted-foreground mt-1">{s.l}</div>
-              </div>
-            ))}
-          </div>
         </div>
-        <div className="relative">
-          <div className="absolute -inset-8 bg-primary/10 blur-3xl rounded-full" />
-          <div className="relative mx-auto w-72 h-[560px] rounded-[3rem] border-8 border-secondary bg-card shadow-glow overflow-hidden">
-            <div className="h-full p-6 flex flex-col gap-4 bg-gradient-to-b from-secondary to-background">
-              <div className="h-2 w-16 mx-auto bg-border rounded-full" />
-              <div className="rounded-xl bg-accent-gradient p-4 text-primary-foreground">
-                <div className="text-xs opacity-80">Order #4821</div>
-                <div className="text-2xl font-bold">€ 84,210</div>
-              </div>
-              {[1,2,3,4].map(i=>(
-                <div key={i} className="rounded-xl border border-border bg-card/80 p-3 flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-md bg-secondary" />
-                  <div className="flex-1">
-                    <div className="h-2 w-24 bg-secondary rounded mb-2" />
-                    <div className="h-2 w-16 bg-secondary/60 rounded" />
-                  </div>
-                  <div className="text-xs text-primary font-semibold">×{i*4}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <ul className="space-y-4">
+          {[
+            "ROI in eCommerce is extremely hard to achieve",
+            "Platforms and transformation projects are extremely costly",
+            "Manual effort and processes are up to 45% of total cost",
+            "Integration into existing systems is costly and time-consuming",
+          ].map((p) => (
+            <li key={p} className="flex gap-4 rounded-2xl border border-border bg-card p-6">
+              <span className="h-2 w-2 mt-2 rounded-full bg-primary shrink-0" />
+              <span>{p}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </Section>
 
-    {/* Case studies */}
-    <Section className="border-t border-border">
-      <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
-        <div>
-          <Eyebrow>Featured Work</Eyebrow>
-          <h2 className="text-4xl md:text-5xl font-bold">Built for brands that scale.</h2>
-        </div>
-        <Button asChild variant="outline"><Link to="/contact">See more <ArrowRight className="ml-1"/></Link></Button>
-      </div>
-      <div className="grid gap-6 md:grid-cols-3">
-        {cases.map((c) => (
-          <div key={c.brand} className="group rounded-2xl border border-border bg-card overflow-hidden hover:-translate-y-1 transition-transform duration-300 shadow-card-elegant">
-            <div className={`aspect-[4/3] bg-gradient-to-br ${c.color} relative`}>
-              <div className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-foreground/30">{c.brand}</div>
-            </div>
-            <div className="p-6">
-              <div className="text-xs text-primary font-semibold uppercase tracking-wider mb-2">{c.tag}</div>
-              <h3 className="text-xl font-bold mb-2">{c.brand} Commerce</h3>
-              <p className="text-sm text-muted-foreground">Headless rebuild delivering 3.2× faster checkout and 41% revenue lift.</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Section>
-
-    {/* Services */}
+    {/* We do 3 things */}
     <Section className="border-t border-border">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <Eyebrow>What we do</Eyebrow>
-        <h2 className="text-4xl md:text-5xl font-bold">End-to-end commerce expertise.</h2>
+        <h2 className="text-4xl md:text-5xl font-bold">We do three things.</h2>
+        <p className="mt-4 text-muted-foreground">A platform, an automation layer, and a managed services team — designed to work together as one AI operating system.</p>
       </div>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {services.map((s) => (
-          <Link key={s.to} to={s.to} className="group rounded-2xl border border-border bg-card p-8 hover:border-primary/50 hover:-translate-y-1 transition-all duration-300">
-            <s.icon className="h-10 w-10 text-primary mb-4" />
-            <h3 className="text-lg font-bold mb-2">{s.title}</h3>
-            <p className="text-sm text-muted-foreground mb-4">{s.desc}</p>
+      <div className="grid gap-6 md:grid-cols-3">
+        {pillars.map((p) => (
+          <Link key={p.to} to={p.to} className="group rounded-2xl border border-border bg-card p-8 hover:border-primary/50 hover:-translate-y-1 transition-all duration-300">
+            <p.icon className="h-10 w-10 text-primary mb-4" />
+            <h3 className="text-xl font-bold mb-2">{p.title}</h3>
+            <p className="text-sm text-muted-foreground mb-4">{p.desc}</p>
             <span className="text-sm text-primary inline-flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <ArrowRight className="h-4 w-4" /></span>
           </Link>
         ))}
       </div>
     </Section>
 
-    {/* Process */}
+    {/* Why unique */}
     <Section className="border-t border-border">
       <div className="grid gap-12 lg:grid-cols-[1fr_1.5fr]">
         <div>
-          <Eyebrow>How we work</Eyebrow>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">A proven path from idea to operation.</h2>
-          <p className="text-muted-foreground">Every engagement follows the same disciplined process — refined over hundreds of platform launches.</p>
+          <Eyebrow>Why we're different</Eyebrow>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">We don't replace your agency or your team.</h2>
+          <p className="text-muted-foreground">We disrupt the supplier-induced demand problem that's destroying eCommerce profitability — by automating the tasks and effort that consume your operations.</p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">
-          {steps.map((s, i) => (
-            <div key={s.title} className="rounded-2xl border border-border bg-card p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="h-8 w-8 rounded-md bg-primary/10 text-primary flex items-center justify-center text-sm font-bold">{i+1}</span>
-                <s.icon className="h-5 w-5 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-1">{s.title}</h3>
-              <p className="text-sm text-muted-foreground">{s.desc}</p>
+          {why.map((w) => (
+            <div key={w.title} className="rounded-2xl border border-border bg-card p-6">
+              <w.icon className="h-8 w-8 text-primary mb-3" />
+              <h3 className="text-lg font-bold mb-1">{w.title}</h3>
+              <p className="text-sm text-muted-foreground">{w.desc}</p>
             </div>
           ))}
         </div>
       </div>
     </Section>
 
-    {/* Testimonial */}
+    {/* Traction */}
+    <Section className="border-t border-border">
+      <div className="text-center max-w-2xl mx-auto mb-12">
+        <Eyebrow>Traction</Eyebrow>
+        <h2 className="text-4xl md:text-5xl font-bold">What we've achieved in 3 months.</h2>
+      </div>
+      <div className="grid gap-6 md:grid-cols-3">
+        {[
+          { n: "€400k+", l: "Committed revenue for 2026" },
+          { n: "Live", l: "Lighthouse clients onboard" },
+          { n: "Built", l: "Platform, automation & LinkCommerce" },
+        ].map((s) => (
+          <div key={s.l} className="rounded-2xl border border-border bg-card p-8 text-center">
+            <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">{s.n}</div>
+            <div className="text-sm text-muted-foreground">{s.l}</div>
+          </div>
+        ))}
+      </div>
+    </Section>
+
+    {/* Founder quote */}
     <Section className="border-t border-border">
       <figure className="max-w-4xl mx-auto text-center">
         <blockquote className="text-2xl md:text-4xl font-semibold leading-tight">
-          "RunCommerce rebuilt our B2B platform in six months. Order volume doubled, and our team finally has the tooling to keep up with growth."
+          "There are thousands of operational problems in eCommerce, and AI is finally capable of solving them. We have no moat to protect — which means we can compete with the A-league."
         </blockquote>
         <figcaption className="mt-8 text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Anna Lindqvist</span> · CTO, Northwave Industries
+          <span className="font-semibold text-foreground">Eamonn Grant</span> · Founder & CEO, RunCommerce
         </figcaption>
       </figure>
     </Section>
