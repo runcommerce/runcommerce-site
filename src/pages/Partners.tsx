@@ -16,7 +16,7 @@ const tiers: { icon: typeof Cpu; eyebrow: string; title: string; desc: string; p
     partners: [
       { name: "Stripe", slug: "stripe" },
       { name: "PayPal", slug: "paypal" },
-      { name: "Elavon" },
+      { name: "Elavon", slug: "elavon" },
     ],
   },
   {
@@ -43,7 +43,7 @@ const tiers: { icon: typeof Cpu; eyebrow: string; title: string; desc: string; p
 const logos: Logo[] = [
   { name: "Stripe", slug: "stripe" },
   { name: "PayPal", slug: "paypal" },
-  { name: "Elavon" },
+  { name: "Elavon", slug: "elavon" },
   { name: "Holbi" },
   { name: "Standfast Partners" },
   { name: "Lovable Cloud" },
