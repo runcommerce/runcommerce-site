@@ -42,20 +42,32 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              className={({ isActive }) =>
-                cn(
-                  "text-sm transition-colors hover:text-foreground",
-                  isActive ? "text-foreground" : "text-muted-foreground",
-                )
-              }
-            >
-              {l.label}
-            </NavLink>
-          ))}
+          {links.map((l) =>
+            l.external ? (
+              <a
+                key={l.to}
+                href={l.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                className={({ isActive }) =>
+                  cn(
+                    "text-sm transition-colors hover:text-foreground",
+                    isActive ? "text-foreground" : "text-muted-foreground",
+                  )
+                }
+              >
+                {l.label}
+              </NavLink>
+            ),
+          )}
         </nav>
 
         <div className="hidden md:block">
