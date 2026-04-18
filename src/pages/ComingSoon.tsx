@@ -13,13 +13,10 @@ const ComingSoon = () => {
     setStatus("loading");
 
     try {
-      const res = await fetch("https://app.loops.so/api/v1/contacts/create", {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_LOOPS_API_KEY}`,
-        },
-        body: JSON.stringify({ email, source: "coming-soon" }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
       });
 
       if (res.ok) {
