@@ -10,7 +10,7 @@ const Footer = () => (
           <img src={logoWordmark} alt="RunCommerce" className="h-8 w-auto" loading="lazy" />
         </Link>
         <p className="mt-4 text-sm text-muted-foreground max-w-sm">
-          Scalable B2B ecommerce platforms, enterprise integrations, and managed hosting for ambitious brands.
+          The AI operating system for eCommerce. Making eCommerce profitable with AI.
         </p>
         <div className="mt-6 flex gap-4 text-muted-foreground">
           <a href="#" aria-label="Twitter" className="hover:text-foreground"><Twitter className="h-5 w-5" /></a>
@@ -19,20 +19,20 @@ const Footer = () => (
         </div>
       </div>
       <div>
-        <h4 className="font-semibold mb-4 text-sm">Services</h4>
+        <h4 className="font-semibold mb-4 text-sm">What we do</h4>
         <ul className="space-y-2 text-sm text-muted-foreground">
-          <li><Link to="/ecommerce" className="hover:text-foreground">E-commerce Development</Link></li>
-          <li><Link to="/b2b" className="hover:text-foreground">B2B Enterprise</Link></li>
-          <li><Link to="/hosting" className="hover:text-foreground">Hosting</Link></li>
-          <li><Link to="/datalink" className="hover:text-foreground">Datalink</Link></li>
+          <li><Link to="/platform" className="hover:text-foreground">RunCommerce Platform</Link></li>
+          <li><Link to="/automation" className="hover:text-foreground">AI Automation Layer</Link></li>
+          <li><Link to="/services" className="hover:text-foreground">AI Managed Services</Link></li>
+          <li><Link to="/linkcommerce" className="hover:text-foreground">LinkCommerce</Link></li>
         </ul>
       </div>
       <div>
         <h4 className="font-semibold mb-4 text-sm">Company</h4>
         <ul className="space-y-2 text-sm text-muted-foreground">
+          <li><Link to="/about" className="hover:text-foreground">About & Team</Link></li>
           <li><Link to="/contact" className="hover:text-foreground">Contact</Link></li>
           <li><a href="#" className="hover:text-foreground">Privacy</a></li>
-          <li><a href="#" className="hover:text-foreground">Terms</a></li>
         </ul>
       </div>
     </div>

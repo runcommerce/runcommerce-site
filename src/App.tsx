@@ -5,10 +5,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import Ecommerce from "./pages/Ecommerce";
-import B2B from "./pages/B2B";
-import Hosting from "./pages/Hosting";
-import Datalink from "./pages/Datalink";
+import Platform from "./pages/Platform";
+import Automation from "./pages/Automation";
+import Services from "./pages/Services";
+import LinkCommerce from "./pages/LinkCommerce";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -23,11 +24,17 @@ const App = () => (
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/ecommerce" element={<Ecommerce />} />
-            <Route path="/b2b" element={<B2B />} />
-            <Route path="/hosting" element={<Hosting />} />
-            <Route path="/datalink" element={<Datalink />} />
+            <Route path="/platform" element={<Platform />} />
+            <Route path="/automation" element={<Automation />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/linkcommerce" element={<LinkCommerce />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            {/* Legacy redirects */}
+            <Route path="/ecommerce" element={<Platform />} />
+            <Route path="/b2b" element={<Automation />} />
+            <Route path="/hosting" element={<Services />} />
+            <Route path="/datalink" element={<LinkCommerce />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
