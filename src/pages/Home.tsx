@@ -27,7 +27,7 @@ const Home = () => (
       <div className="container relative grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center py-20">
         <div className="animate-fade-up">
           <Eyebrow>RunCommerce — The AI Operating System for eCommerce</Eyebrow>
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.02] mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6 break-words hyphens-auto">
             Making eCommerce <span className="text-gradient">profitable</span> with AI.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8">
@@ -42,22 +42,22 @@ const Home = () => (
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6 animate-fade-up">
-          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">€10B</div>
-            <div className="mt-2 text-sm text-muted-foreground">Online sales delivered by our team</div>
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 animate-fade-up">
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-5 sm:p-8">
+            <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gradient leading-none">€10B</div>
+            <div className="mt-2 text-xs sm:text-sm text-muted-foreground">Online sales delivered by our team</div>
           </div>
-          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">90%</div>
-            <div className="mt-2 text-sm text-muted-foreground">Of manual eCommerce tasks automatable</div>
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-5 sm:p-8">
+            <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gradient leading-none">90%</div>
+            <div className="mt-2 text-xs sm:text-sm text-muted-foreground">Of manual eCommerce tasks automatable</div>
           </div>
-          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">7 min</div>
-            <div className="mt-2 text-sm text-muted-foreground">To launch a new store, fully integrated</div>
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-5 sm:p-8">
+            <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gradient leading-none">7 min</div>
+            <div className="mt-2 text-xs sm:text-sm text-muted-foreground">To launch a new store, fully integrated</div>
           </div>
-          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8">
-            <div className="text-5xl md:text-6xl font-bold text-gradient">25 yrs</div>
-            <div className="mt-2 text-sm text-muted-foreground">Combined eCommerce leadership</div>
+          <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-5 sm:p-8">
+            <div className="text-3xl sm:text-5xl md:text-6xl font-bold text-gradient leading-none">25 yrs</div>
+            <div className="mt-2 text-xs sm:text-sm text-muted-foreground">Combined eCommerce leadership</div>
           </div>
         </div>
       </div>
