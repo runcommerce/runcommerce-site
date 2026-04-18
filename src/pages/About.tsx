@@ -56,6 +56,54 @@ const About = () => (
       </div>
     </Section>
 
+    {/* Clients & brands */}
+    <Section className="border-t border-border">
+      <div className="max-w-2xl mb-12">
+        <Eyebrow>Clients & brands</Eyebrow>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">Clients and brands using our technology.</h2>
+        <p className="mt-4 text-muted-foreground">
+          A snapshot of the brands the RunCommerce team has built, scaled and operated eCommerce for.
+        </p>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+        {[
+          { name: "Samsung", slug: "samsung" },
+          { name: "Apple", slug: "apple" },
+          { name: "ESW" },
+          { name: "SuperValu" },
+          { name: "AA" },
+          { name: "Dunnes Stores" },
+          { name: "Musgrave" },
+          { name: "Heineken", slug: "heineken" },
+          { name: "eir" },
+          { name: "Digicel" },
+          { name: "Holbi" },
+        ].map((b: { name: string; slug?: string }) => (
+          <div
+            key={b.name}
+            title={b.name}
+            className="group rounded-xl border border-border bg-card/60 backdrop-blur h-20 flex flex-col items-center justify-center gap-1.5 px-2 hover:border-primary/40 hover:bg-card transition-colors"
+          >
+            {b.slug ? (
+              <img
+                src={`https://cdn.simpleicons.org/${b.slug}/ffffff`}
+                alt={`${b.name} logo`}
+                loading="lazy"
+                className="h-7 w-auto max-w-[60%] opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            ) : (
+              <div className="h-7 flex items-center justify-center text-sm font-bold text-foreground/90">
+                {b.name}
+              </div>
+            )}
+            <span className="text-[10px] uppercase tracking-wider text-muted-foreground text-center leading-tight">
+              {b.name}
+            </span>
+          </div>
+        ))}
+      </div>
+    </Section>
+
     <CTAStrip />
   </>
 );
