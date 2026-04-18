@@ -140,14 +140,14 @@ const Partners = () => (
               { name: "PayPal", slug: "paypal" },
               { name: "Elavon", slug: "elavon" },
               { name: "Adyen", slug: "adyen" },
-              { name: "Worldpay" },
+              { name: "Worldpay", domain: "worldpay.com" },
               { name: "Klarna", slug: "klarna" },
               { name: "Apple Pay", slug: "applepay" },
               { name: "Google Pay", slug: "googlepay" },
-              { name: "AIB Merchant Services" },
-              { name: "Realex" },
+              { name: "AIB Merchant Services", slug: "aib" },
+              { name: "Realex", domain: "realexpayments.com" },
               { name: "Sage Pay", slug: "sage" },
-              { name: "Authorize.Net" },
+              { name: "Authorize.Net", domain: "authorize.net" },
             ],
           },
           {
@@ -157,10 +157,10 @@ const Partners = () => (
               { name: "DHL", slug: "dhl" },
               { name: "UPS", slug: "ups" },
               { name: "FedEx", slug: "fedex" },
-              { name: "An Post" },
-              { name: "Royal Mail" },
-              { name: "Hermes" },
-              { name: "ParcelForce" },
+              { name: "An Post", domain: "anpost.com" },
+              { name: "Royal Mail", domain: "royalmail.com" },
+              { name: "Hermes", slug: "hermes" },
+              { name: "ParcelForce", domain: "parcelforce.com" },
               { name: "Click & Collect" },
               { name: "Local Delivery Zones" },
               { name: "Per-Item Rates" },
@@ -171,38 +171,38 @@ const Partners = () => (
             category: "ERP & Accounting",
             items: [
               { name: "SAP", slug: "sap" },
-              { name: "Microsoft Dynamics 365" },
-              { name: "NetSuite" },
+              { name: "Microsoft Dynamics 365", domain: "dynamics.microsoft.com" },
+              { name: "NetSuite", domain: "netsuite.com" },
               { name: "Sage", slug: "sage" },
               { name: "Xero", slug: "xero" },
               { name: "QuickBooks", slug: "quickbooks" },
               { name: "Odoo", slug: "odoo" },
-              { name: "Exchequer" },
-              { name: "Brightpearl" },
-              { name: "Linnworks" },
+              { name: "Exchequer", domain: "advanced.com" },
+              { name: "Brightpearl", domain: "brightpearl.com" },
+              { name: "Linnworks", domain: "linnworks.com" },
             ],
           },
           {
             category: "Marketplaces & Channels",
             items: [
-              { name: "Amazon" },
+              { name: "Amazon", domain: "amazon.com" },
               { name: "eBay", slug: "ebay" },
               { name: "Etsy", slug: "etsy" },
-              { name: "Google Shopping" },
+              { name: "Google Shopping", domain: "shopping.google.com" },
               { name: "Facebook & Instagram Shops", slug: "facebook" },
               { name: "TikTok Shop", slug: "tiktok" },
               { name: "Pinterest", slug: "pinterest" },
-              { name: "Channel Advisor" },
+              { name: "Channel Advisor", domain: "channeladvisor.com" },
             ],
           },
           {
             category: "Marketing & CRM",
             items: [
-              { name: "Klaviyo" },
+              { name: "Klaviyo", domain: "klaviyo.com" },
               { name: "Mailchimp", slug: "mailchimp" },
               { name: "HubSpot", slug: "hubspot" },
-              { name: "Salesforce" },
-              { name: "Dotdigital" },
+              { name: "Salesforce", domain: "salesforce.com" },
+              { name: "Dotdigital", domain: "dotdigital.com" },
               { name: "Google Analytics 4", slug: "googleanalytics" },
               { name: "Google Tag Manager", slug: "googletagmanager" },
               { name: "Meta Pixel", slug: "meta" },
@@ -214,11 +214,11 @@ const Partners = () => (
             items: [
               { name: "Algolia", slug: "algolia" },
               { name: "Elasticsearch", slug: "elasticsearch" },
-              { name: "Akeneo PIM" },
+              { name: "Akeneo PIM", domain: "akeneo.com" },
               { name: "Trustpilot", slug: "trustpilot" },
-              { name: "Yotpo" },
-              { name: "Feefo" },
-              { name: "Reviews.io" },
+              { name: "Yotpo", domain: "yotpo.com" },
+              { name: "Feefo", domain: "feefo.com" },
+              { name: "Reviews.io", domain: "reviews.io" },
               { name: "DeepL Translation", slug: "deepl" },
             ],
           },
@@ -226,19 +226,26 @@ const Partners = () => (
           <div key={cat.category} className="rounded-2xl border border-border bg-card p-6 hover:border-primary/50 transition-colors">
             <h3 className="text-lg font-bold mb-4">{cat.category}</h3>
             <div className="flex flex-wrap gap-2">
-              {cat.items.map((i) => (
-                <span key={i.name} className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full border border-border bg-background/60 text-muted-foreground">
-                  {i.slug && (
-                    <img
-                      src={`https://cdn.simpleicons.org/${i.slug}/ffffff`}
-                      alt=""
-                      loading="lazy"
-                      className="h-3.5 w-auto opacity-80"
-                    />
-                  )}
-                  {i.name}
-                </span>
-              ))}
+              {cat.items.map((i: { name: string; slug?: string; domain?: string }) => {
+                const src = i.slug
+                  ? `https://cdn.simpleicons.org/${i.slug}/ffffff`
+                  : i.domain
+                  ? `https://www.google.com/s2/favicons?domain=${i.domain}&sz=64`
+                  : null;
+                return (
+                  <span key={i.name} className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full border border-border bg-background/60 text-muted-foreground">
+                    {src && (
+                      <img
+                        src={src}
+                        alt=""
+                        loading="lazy"
+                        className="h-3.5 w-3.5 object-contain opacity-80"
+                      />
+                    )}
+                    {i.name}
+                  </span>
+                );
+              })}
             </div>
           </div>
         ))}
