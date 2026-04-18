@@ -10,6 +10,7 @@ const links = [
   { to: "/automation", label: "AI Automation" },
   { to: "/services", label: "Managed Services" },
   { to: "/linkcommerce", label: "LinkCommerce" },
+  { to: "https://hostcommerce.ie", label: "HostCommerce", external: true },
   { to: "/about", label: "About" },
   { to: "/partners", label: "Partners" },
 ];
@@ -41,20 +42,32 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              className={({ isActive }) =>
-                cn(
-                  "text-sm transition-colors hover:text-foreground",
-                  isActive ? "text-foreground" : "text-muted-foreground",
-                )
-              }
-            >
-              {l.label}
-            </NavLink>
-          ))}
+          {links.map((l) =>
+            l.external ? (
+              <a
+                key={l.to}
+                href={l.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                className={({ isActive }) =>
+                  cn(
+                    "text-sm transition-colors hover:text-foreground",
+                    isActive ? "text-foreground" : "text-muted-foreground",
+                  )
+                }
+              >
+                {l.label}
+              </NavLink>
+            ),
+          )}
         </nav>
 
         <div className="hidden md:block">
@@ -71,11 +84,23 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-lg">
           <div className="container py-4 flex flex-col gap-4">
-            {links.map((l) => (
-              <NavLink key={l.to} to={l.to} className="text-sm text-muted-foreground hover:text-foreground">
-                {l.label}
-              </NavLink>
-            ))}
+            {links.map((l) =>
+              l.external ? (
+                <a
+                  key={l.to}
+                  href={l.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <NavLink key={l.to} to={l.to} className="text-sm text-muted-foreground hover:text-foreground">
+                  {l.label}
+                </NavLink>
+              ),
+            )}
             <Button asChild size="sm" className="w-full">
               <Link to="/contact">Contact</Link>
             </Button>
