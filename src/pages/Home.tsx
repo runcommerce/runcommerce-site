@@ -33,7 +33,7 @@ const Home = () => (
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
       <div className="container relative grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center py-20">
         <div className="animate-fade-up">
-          <Eyebrow>Nordstack — B2B Commerce Engineering</Eyebrow>
+          <Eyebrow>RunCommerce — B2B Commerce Engineering</Eyebrow>
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.02] mb-6">
             Scalable <span className="text-gradient">B2B Ecommerce</span> Platforms
           </h1>
@@ -72,7 +72,7 @@ const Home = () => (
     <Section className="border-t border-border">
       <div className="grid gap-16 lg:grid-cols-2 items-center">
         <div>
-          <Eyebrow>The Nordstack Platform</Eyebrow>
+          <Eyebrow>The RunCommerce Platform</Eyebrow>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">A modern foundation for serious B2B commerce.</h2>
           <p className="text-muted-foreground text-lg mb-8">
             Headless architecture, multi-store support, role-based catalogs and bulk ordering — out of the box. Extend with your own services or plug into ours.
@@ -181,7 +181,7 @@ const Home = () => (
     <Section className="border-t border-border">
       <figure className="max-w-4xl mx-auto text-center">
         <blockquote className="text-2xl md:text-4xl font-semibold leading-tight">
-          "Nordstack rebuilt our B2B platform in six months. Order volume doubled, and our team finally has the tooling to keep up with growth."
+          "RunCommerce rebuilt our B2B platform in six months. Order volume doubled, and our team finally has the tooling to keep up with growth."
         </blockquote>
         <figcaption className="mt-8 text-sm text-muted-foreground">
           <span className="font-semibold text-foreground">Anna Lindqvist</span> · CTO, Northwave Industries

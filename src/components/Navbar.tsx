@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logoIcon from "@/assets/logo-icon.png";
 
 const links = [
   { to: "/ecommerce", label: "E-commerce" },
@@ -34,8 +35,8 @@ const Navbar = () => {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-bold text-lg">
-          <span className="h-8 w-8 rounded-md bg-accent-gradient shadow-glow" />
-          <span>Nordstack</span>
+          <img src={logoIcon} alt="RunCommerce" className="h-8 w-8" width={32} height={32} />
+          <span>RunCommerce</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
