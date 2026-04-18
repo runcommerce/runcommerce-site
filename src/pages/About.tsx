@@ -4,7 +4,6 @@ import CTAStrip from "@/components/CTAStrip";
 
 const team = [
   { name: "Eamonn Grant", role: "Founder & CEO", bio: "Experienced international executive and second-time founder. 25 years across commercial, product, technology and transformation. 20 years in eCommerce, €10B in online sales. Worked with Samsung, ESW, SuperValu and the AA." },
-  { name: "Vladyslav Malyshev", role: "CTO", bio: "eCommerce technology leader at Holbi. Kharkiv National Technical University graduate. Builds global platforms and scales digital commerce operations." },
   { name: "Bartosz Piasta", role: "CPO", bio: "Product and technology leader with 15+ years building scalable platforms. Drove innovation and transformation at Samsung Europe and Apple." },
   { name: "Brian Kitson", role: "CCO", bio: "Senior marketing leader with 20+ years' experience. Led VALUEclub at Dunnes Stores, driving CRM innovation and digital growth." },
   { name: "Steven Hazeldene", role: "CFO", bio: "Head of DTC Commercial at Samsung Europe. Drives eCommerce growth, digital strategy and customer experience across international markets." },
