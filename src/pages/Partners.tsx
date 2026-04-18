@@ -210,6 +210,13 @@ const Partners = () => (
             ],
           },
           {
+            category: "Bespoke",
+            items: [
+              { name: "Inntact", domain: "inntact.com" },
+              { name: "Floricode", domain: "floricode.com" },
+            ],
+          },
+          {
             category: "Search, PIM & Reviews",
             items: [
               { name: "Algolia", slug: "algolia" },
