@@ -83,6 +83,57 @@ const Partners = () => (
       </div>
     </Section>
 
+    {/* Integrations */}
+    <Section className="border-t border-border">
+      <div className="text-center max-w-2xl mx-auto mb-16">
+        <Eyebrow>Integrations</Eyebrow>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">100+ integrations, ready out of the box.</h2>
+        <p className="mt-4 text-muted-foreground">Years of platform engineering across every category your store relies on — payments, shipping, ERP, marketplaces, marketing and more.</p>
+      </div>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {[
+          {
+            category: "Payments & Fraud",
+            items: ["Stripe", "PayPal", "Elavon", "Adyen", "Worldpay", "Klarna", "Apple Pay", "Google Pay", "AIB Merchant Services", "Realex", "Sage Pay", "Authorize.Net"],
+          },
+          {
+            category: "Shipping & Fulfilment",
+            items: ["DPD", "DHL", "UPS", "FedEx", "An Post", "Royal Mail", "Hermes", "ParcelForce", "Click & Collect", "Local Delivery Zones", "Per-Item Rates", "Free Shipping Rules"],
+          },
+          {
+            category: "ERP & Accounting",
+            items: ["SAP", "Microsoft Dynamics 365", "NetSuite", "Sage", "Xero", "QuickBooks", "Odoo", "Exchequer", "Brightpearl", "Linnworks"],
+          },
+          {
+            category: "Marketplaces & Channels",
+            items: ["Amazon", "eBay", "Etsy", "Google Shopping", "Facebook & Instagram Shops", "TikTok Shop", "Pinterest", "Channel Advisor"],
+          },
+          {
+            category: "Marketing & CRM",
+            items: ["Klaviyo", "Mailchimp", "HubSpot", "Salesforce", "Dotdigital", "Google Analytics 4", "Google Tag Manager", "Meta Pixel", "Hotjar"],
+          },
+          {
+            category: "Search, PIM & Reviews",
+            items: ["Algolia", "Elasticsearch", "Akeneo PIM", "Trustpilot", "Yotpo", "Feefo", "Reviews.io", "DeepL Translation"],
+          },
+        ].map((cat) => (
+          <div key={cat.category} className="rounded-2xl border border-border bg-card p-6 hover:border-primary/50 transition-colors">
+            <h3 className="text-lg font-bold mb-4">{cat.category}</h3>
+            <div className="flex flex-wrap gap-2">
+              {cat.items.map((i) => (
+                <span key={i} className="text-xs px-3 py-1 rounded-full border border-border bg-background/60 text-muted-foreground">
+                  {i}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="text-center text-sm text-muted-foreground mt-10">
+        Don't see what you need? Our LinkCommerce orchestration layer can integrate any system with an API.
+      </p>
+    </Section>
+
     {/* Become a partner */}
     <Section className="border-t border-border">
       <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-10 md:p-16 shadow-card-elegant">
